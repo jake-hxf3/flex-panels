@@ -1,1 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+#gallery {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.pic {
+    background-color: aqua;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.pic1 {
+    background-image: url(../images/27d3feeca3515cfe78ba67b0d5e42aa0.jpg);
+}
+
+.pic2 {
+    background-image: url(../images/62c9f86eec1aa852efaf579683a4fc3a.jpg);
+}
+
+.pic3 {
+    background-image: url(../images/pexels-gabii-fernandez-199438359-35876669.jpg);
+}
+
+.pic4 {
+    background-image: url(../images/pexels-jonathanborba-19154726.jpg);
+}
+
+.pic > p {
+    width: 100%;
+    margin: 0;
+    transition: transform 0.5s;
+    font-size: 2em;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pic p:first-child {transform: translateY(-100%);}
+.pic p:last-child {transform: translateY(100%);}
+.pic.active p:first-child {transform: translateY(0);}
+.pic.active p:last-child {transform: translateY(0);}
+
+.pic p:nth-child(2) {
+    font-size: 4em;
+}
+
+.pic.open {
+    flex: 5;
+    font-size: 4.5rem;
+}
